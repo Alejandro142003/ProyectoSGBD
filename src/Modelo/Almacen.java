@@ -103,9 +103,9 @@ public class Almacen {
 		return result;
 	}
 	
-	public Articulos[] muestraTodos(){
+	/*public Articulos[] muestraTodos(){
 		return getMisArticulos();
-	}
+	}*/
 	
 	/**
 	 * Devuelve el articulo que coincide con el codigo de dicho artículo
@@ -124,6 +124,9 @@ public class Almacen {
 		return a;
 	}
 	
+	/**
+	 * Nos muestra todos los articulos que tenemos
+	 */
 	public void verArticulos(){
 		for(Articulos a : misArticulos) {
 			System.out.println(a);
