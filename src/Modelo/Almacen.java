@@ -65,8 +65,8 @@ public class Almacen {
 
 	@Override
 	public String toString() {
-		return "Almacen [nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono + ", superficie="
-				+ superficie + "]";
+		return "Nombre de almacen = " + nombre + ", direccion=" + direccion + ", telefono=" + telefono + ", superficie="
+				+ superficie + "\n";
 	}
 	
 	/**
