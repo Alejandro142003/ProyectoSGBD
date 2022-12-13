@@ -1,5 +1,7 @@
 package Modelo;
 
+import java.util.Objects;
+
 public class Articulos {
 	public int codArticulo = 1;
 	
@@ -61,9 +63,31 @@ public class Articulos {
 
 	@Override
 	public String toString() {
-		return "Articulos [codArticulos=" + codArticulo + ", nombre=" + nombre + ", descripcion=" + descripcion
-				+ ", unidades=" + unidades + ", precio=" + precio + "]";
+		return "Codigo de Articulo: "+codArticulo + ", nombre=" + nombre + ", descripcion=" + descripcion
+				+ ", unidades=" + unidades + ", precio=" + precio + "\n";
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(codArticulo, descripcion, nombre, precio, unidades);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Articulos other = (Articulos) obj;
+		return codArticulo == other.codArticulo && Objects.equals(descripcion, other.descripcion)
+				&& Objects.equals(nombre, other.nombre)
+				&& Double.doubleToLongBits(precio) == Double.doubleToLongBits(other.precio)
+				&& unidades == other.unidades;
+	}
+	
+	
+
 }
-/*hola*/
+
