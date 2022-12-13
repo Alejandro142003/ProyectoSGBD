@@ -1,12 +1,12 @@
 package Modelo;
 
 public class Almacen {
-	public String nombre;
-	public String direccion;
-	public String telefono;
-	public int superficie = 0;
+	private String nombre;
+	private String direccion;
+	private String telefono;
+	private int superficie = 0;
 	private Articulos [] misArticulos;
-	public Almacen() {
+	private Almacen() {
 		
 	}
 	
@@ -72,7 +72,7 @@ public class Almacen {
 	 */
 	public int tamañoArray() {
 		int tamaño=0;
-		for(int i = 0; i < misArticulos.lenght; i++) {
+		for(int i = 0; i < misArticulos.length; i++) {
 			if(misArticulos[i]!=null) {
 				tamaño++;
 			}
@@ -87,12 +87,12 @@ public class Almacen {
 	 * @param a Artículo a introducir
 	 * @return Hace que interrumpa el for
 	 */
-	public boolean insertaArticulo(Articulo a) {
+	public boolean insertaArticulo(Articulos a, tamaño) {
 		boolean result = false;
 		if(a!=null && tamañoArray()<tamaño && muestraPorCodigo(a.getCodArticulo())==null) {
-			for(int i = 0; i < misArticulos.lenght && !result; i++) {
+			for(int i = 0; i < misArticulos.length && !result; i++) {
 				if(misArticulos[i]==null) {
-					misEstudiantes[i]=a;
+					misArticulos[i]=a;
 					result = true;
 				}
 			}
@@ -105,9 +105,9 @@ public class Almacen {
 	 * @return: Devuelve el articulo o null si no está
 	 */
 	public Articulos muestraPorCodigo(String codArticulo) {
-		Estudiante a = null;
+		Articulos a = null;
 		if(misArticulos!=null && tamañoArray() > 0) {
-			for(int i = 0; i < misArticulos.length && e == null; i++) {
+			for(int i = 0; i < misArticulos.length && a == null; i++) {
 				if(misArticulos[i].getCodArticulo().equeals(codArticulo)) {
 					a = misArticulos[i];
 				}
@@ -116,15 +116,21 @@ public class Almacen {
 		return a;
 	}
 	
+	public void verArticulos(){
+		for(Articulos a : misArticulos) {
+			System.out.println(a);
+		}
+	}
+	
 	/**
 	 * Actualizamos un articulo
 	 * @param a: Articulo a actualizar
 	 * @return: Hace que interrumpa el for
 	 */
-	public boolean actualizaArticulo(Articulo a) {
+	public boolean actualizaArticulo(Articulos a) {
 		boolean result = false;
 		if(a!=null && muestraPorCodigo(a.getCodArticulo())!=null) {
-			for (int i=0; i<misArticulos.lenght && !result; i++) {
+			for (int i=0; i<misArticulos.length && !result; i++) {
 				if(misArticulos[i].equals(a)) {
 					misArticulos[i]=a;
 					result = true;
@@ -139,10 +145,10 @@ public class Almacen {
 	 * @param a: Articulo a borrar
 	 * @return: Hace que se interrumpa el for
 	 */
-	public boolean eliminaArticulo(Articulo a) {
+	public boolean eliminaArticulo(Articulos a) {
 		boolean result = false;
 		if(a!=null && muestraPorCodigo(a.getCodArticulo())!=null) {
-			for (int i=0; i<misArticulos.lenght && !result; i++) {
+			for (int i=0; i<misArticulos.length && !result; i++) {
 				if(misArticulos[i].equals(a)) {
 					misArticulos[i]=null;
 					result = true;

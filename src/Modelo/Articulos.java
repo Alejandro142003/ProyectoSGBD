@@ -3,13 +3,13 @@ package Modelo;
 import java.util.Objects;
 
 public class Articulos {
-	public int codArticulo = 1;
+	private int codArticulo = 1;
 	
-	public String nombre;
-	public String descripcion;
-	public int unidades = 0;
-	public double precio = 0.0;
-	public Articulos() {
+	private String nombre;
+	private String descripcion;
+	private int unidades = 0;
+	private double precio = 0.0;
+	private Articulos() {
 
 	}
 
