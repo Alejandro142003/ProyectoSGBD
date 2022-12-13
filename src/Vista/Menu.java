@@ -1,6 +1,9 @@
 package Vista;
 import Utilidades.*;
-public class Menus{  
+public class Menu{  
+	/*
+	 *Esta función nos muestra el menu 
+	 */
 	 public static void muestraMenu() {
 		 System.out.println("");
 	        System.out.println("@---------------------------@");
@@ -14,7 +17,11 @@ public class Menus{
 	        System.out.println("@---------------------------@");
 	        System.out.println("");
 	 }
-	 
+	 /**
+	  * Función que pide un entero entre 1 y 4,validandolo
+	  * @return opcion 
+	  */
+	
  public static  int introduceOpcion() {
 	 
 	 int opcion=-1;
@@ -29,6 +36,9 @@ public class Menus{
 	 }while(valido);
 	 return opcion;
  }
+ /*
+  * Funcion que nos muestra el menu
+  */
  public static void modificar() {
 	 System.out.println("");
      System.out.println("@---------------------------@");
@@ -42,6 +52,10 @@ public class Menus{
      System.out.println("@---------------------------@");
      System.out.println("");
  }
+ /**
+  * Función que pide un entero entre 1 y 4,validandolo
+  * @return opcion 
+  */
  public static int chooseOpcion() {
 	 int opcion=-1;
 	 boolean valido=false;
@@ -55,11 +69,18 @@ public class Menus{
 	 }while(valido);
 	 return opcion;
  }
+ /*
+  * Funcion que nos muestra el menu
+  */
  public static void valModificar() {
 	 System.out.println("¿Está seguro de que quiere realizar los cambios efectuadoss?");
 	 System.out.println("1.Si");
 	 System.out.println("2.No");
  }
+ /**
+  * Funciónque pide un entero (1 o 2),validandolo
+  * @return opcion 
+  */
  public static int chooseOption() {
 	 int opcion=-1;
 	 boolean valido=false;
