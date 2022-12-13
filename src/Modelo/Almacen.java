@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package Modelo;
 
 public class Almacen {
@@ -134,3 +135,5 @@ public class Almacen {
 	
 	
 }
+=======
+>>>>>>> cc3ee70a63b774bcc4516433b1483fa1e17fa33a

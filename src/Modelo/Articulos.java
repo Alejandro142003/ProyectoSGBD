@@ -4,31 +4,29 @@ import java.util.Objects;
 
 public class Articulos {
 	public int codArticulo = 1;
-	
+	public int codArticulos = 0;
 	public String nombre;
-	public String descripcion;
-	public int unidades = 0;
-	public double precio = 0.0;
+	public int Unidad = 0;
+	public int prueba = 0;
+
 	public Articulos() {
 
 	}
 
-	public Articulos(int codArticulo, String nombre, String descripcion, int unidades, double precio) {
-		this.codArticulo = codArticulo;
+	public Articulos(int codArticulos, String nombre, int unidad) {
+		this.codArticulos = codArticulos;
 		this.nombre = nombre;
-		this.descripcion = descripcion;
-		this.unidades = unidades;
-		this.precio = precio;
-	}
-	
-	public int getCodArticulo() {
-		return codArticulo;
+		Unidad = unidad;
 	}
 
-	public void setCodArticulo(int codArticulo) {
-		this.codArticulo = codArticulo;
+	public int getCodArticulos() {
+		return codArticulos;
 	}
-	
+
+	public void setCodArticulos(int codArticulos) {
+		this.codArticulos = codArticulos;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -37,34 +35,22 @@ public class Articulos {
 		this.nombre = nombre;
 	}
 
-	public String getDescripcion() {
-		return descripcion;
+	public int getUnidad() {
+		return Unidad;
 	}
 
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-
-	public int getUnidades() {
-		return unidades;
-	}
-
-	public void setUnidades(int unidades) {
-		this.unidades = unidades;
-	}
-
-	public double getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(double precio) {
-		this.precio = precio;
+	public void setUnidad(int unidad) {
+		Unidad = unidad;
 	}
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "Codigo de Articulo: "+codArticulo + ", nombre=" + nombre + ", descripcion=" + descripcion
 				+ ", unidades=" + unidades + ", precio=" + precio + "\n";
+=======
+		return "Articulos [codArticulos=" + codArticulos + ", nombre=" + nombre + ", Unidad=" + Unidad + "]";
+>>>>>>> cc3ee70a63b774bcc4516433b1483fa1e17fa33a
 	}
 
 	@Override
