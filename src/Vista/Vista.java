@@ -1,5 +1,5 @@
-package src.Vista;
-import src.Utilidades.*;
+package Vista;
+import Utilidades.*;
 public class Menus{  
 	 public static void muestraMenu() {
 		 System.out.println("");
@@ -30,14 +30,18 @@ public class Menus{
 	 return opcion;
  }
  public static void modificar() {
-	 System.out.println("Menu Modificar");
-	 System.out.println("Elige una opcion");
-	 System.out.println("1.Modifica el nombre");
-	 System.out.println("2.Modifica la cantidad");
-	 System.out.println("3.Modifica el precio");
-	 System.out.println("4.Modifica la descripcion");
+	 System.out.println("");
+     System.out.println("@---------------------------@");
+     System.out.println("|       MENU MODIFICAR       |");
+     System.out.println("|----------------------------|");
+     System.out.println("|Elige una opcion:           |");
+     System.out.println("| 1.Modifica el nombre       |");
+     System.out.println("| 2.Modifica la cantidad     |");
+     System.out.println("| 3.Modifica el precio       |");
+     System.out.println("| 4.Modifica la descripcion  |");
+     System.out.println("@---------------------------@");
+     System.out.println("");
  }
-
  public static int chooseOpcion() {
 	 int opcion=-1;
 	 boolean valido=false;
