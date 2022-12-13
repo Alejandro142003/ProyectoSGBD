@@ -99,12 +99,16 @@ public class Almacen {
 		}
 	}
 	
+	public Articulos[] muestraTodos(){
+		getMisArticulos();
+	}
+	
 	/**
 	 * Devuelve el articulo que coincide con el codigo de dicho artículo
 	 * @param codArticulo: el codigo que se va a buscar
 	 * @return: Devuelve el articulo o null si no está
 	 */
-	public Articulos muestraPorCodigo(String codArticulo) {
+	public Articulos muestraPorCodigo(int codArticulo) {
 		Articulos a = null;
 		if(misArticulos!=null && tamañoArray() > 0) {
 			for(int i = 0; i < misArticulos.length && a == null; i++) {
