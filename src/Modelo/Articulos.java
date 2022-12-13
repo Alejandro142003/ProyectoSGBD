@@ -4,8 +4,8 @@ public class Articulos {
 	public int codArticulo = 0;
 	public String nombre;
 	public String descripcion;
-	public int unidades=0;
-	public double precio=0.0;
+	public int unidades = 0;
+	public double precio = 0.0;
 	public Articulos() {
 
 	}
