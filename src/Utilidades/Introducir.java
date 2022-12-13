@@ -3,6 +3,7 @@ package Utilidades;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+public class Introducir {
 /**
  * Para recoger un float por teclado.
  * 
@@ -18,7 +19,7 @@ public static float leeFloat (String text) {
 	do {
 		try {
 			System.out.print(text);
-			num = Scanner.nextFloat();
+			num = teclado.nextFloat();
 			if (num < 0) {
 				System.out.println("Ha introducido un número no válido, por favor introduzca uno correcto");
 				numeroCorrecto = true;
@@ -53,7 +54,7 @@ public static int leeEntero(String text) {
 	do {
 		try {
 			System.out.print(text);
-			num = Scanner.nextInt();
+			num = teclado.nextInt();
 			if (num < 0) {
 				System.out.println("Ha introducido un número no válido, por favor introduzca uno correcto");
 				numeroCorrecto = true;
@@ -77,15 +78,14 @@ public static int leeEntero(String text) {
  * Para devolver un String escrito por teclado.
  * 
  * @param text
- * @return String
+ * @return texto as string
  */
 
 public static String leeString (String text){
     Scanner scan = new Scanner(System.in);
     String texto;
 
-    System.out.print();
-    texto = teclado.nextLine();
+    texto = scan.nextLine();
 
     return texto;
   }
@@ -98,9 +98,10 @@ public static String leeString (String text){
  */
 
 public static int[] rellenaArray(int[] miArray){
-    for (int i = 0; i < miArray.length; i++);
+    for (int i = 0; i < miArray.length; i++) {
     miArray[i] = leeEntero("Introduce número para la posición " + i + " :");
-    return myArray;
+    }
+    return miArray;
 }
 
 /**
@@ -111,7 +112,10 @@ public static int[] rellenaArray(int[] miArray){
  */
 
 public static float[] rellenaArray(float[] miArray){
-    for (int i = 0; i < miArray.length; i++);
+    for (int i = 0; i < miArray.length; i++) {
     miArray[i] = leeFloat("introduce número para la posición " + i + " :");
-    return myArray;
+    }
+    return miArray;
+}
+
 }
