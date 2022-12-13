@@ -82,13 +82,14 @@ public class Almacen {
 	
 	
 	/**
-	 * Busca una zona vacía dentro del array y una vez encontrada la iguala las direccioones de memoria
+	 * Busca una zona vacía dentro del array y una vez encontrada la iguala las direccioones de memoria.
+	 * También implementa que no se pueda registrar dos artículos con el mismo código
 	 * @param a Artículo a introducir
 	 * @return Hace que interrumpa el for
 	 */
 	public boolean insertaArticulo(Articulo a) {
 		boolean result = false;
-		if(a!=null && tamañoArray()<tamaño) {
+		if(a!=null && tamañoArray()<tamaño && muestraPorCodigo(a.getCodArticulo())==null) {
 			for(int i = 0; i < misArticulos.lenght && !result; i++) {
 				if(misArticulos[i]==null) {
 					misEstudiantes[i]=a;
@@ -115,7 +116,18 @@ public class Almacen {
 		return a;
 	}
 	
-	
+	public boolean actualizaArticulo(Articulo a) {
+		boolean result = false;
+		if(a!=null && muestraPorCodigo(a.getCodArticulo())!=null) {
+			for (int i=0; i<misArticulos.lenght && !result; i++) {
+				if(misArticulos[i].equals(a)) {
+					misArticulos[i]=a;
+					result = true;
+				}
+			}
+		}
+		return result;
+	}
 	
 	
 	
