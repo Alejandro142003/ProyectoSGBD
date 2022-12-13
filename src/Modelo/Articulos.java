@@ -1,27 +1,27 @@
 package Modelo;
 
-public class Articulo {
-	public int codArticulo = 0;
+public class Articulos {
+	public int codArticulos = 0;
 	public String nombre;
 	public int Unidad = 0;
 	public int prueba = 0;
 
-	public Articulo() {
+	public Articulos() {
 
 	}
 
-	public Articulo(int codArticulo, String nombre, int unidad) {
-		this.codArticulo = codArticulo;
+	public Articulos(int codArticulos, String nombre, int unidad) {
+		this.codArticulos = codArticulos;
 		this.nombre = nombre;
 		Unidad = unidad;
 	}
 
-	public int getCodArticulo() {
-		return codArticulo;
+	public int getCodArticulos() {
+		return codArticulos;
 	}
 
-	public void setCodArticulo(int codArticulo) {
-		this.codArticulo = codArticulo;
+	public void setCodArticulos(int codArticulos) {
+		this.codArticulos = codArticulos;
 	}
 
 	public String getNombre() {
@@ -42,7 +42,7 @@ public class Articulo {
 
 	@Override
 	public String toString() {
-		return "Articulo [codArticulo=" + codArticulo + ", nombre=" + nombre + ", Unidad=" + Unidad + "]";
+		return "Articulos [codArticulos=" + codArticulos + ", nombre=" + nombre + ", Unidad=" + Unidad + "]";
 	}
 
 }
