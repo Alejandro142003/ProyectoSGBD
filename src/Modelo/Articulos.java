@@ -1,7 +1,8 @@
 package Modelo;
 
 public class Articulos {
-	public int codArticulo = 0;
+	public int codArticulo = 1;
+	
 	public String nombre;
 	public String descripcion;
 	public int unidades = 0;
