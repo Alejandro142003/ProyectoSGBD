@@ -1,29 +1,31 @@
 package Modelo;
 
 public class Articulos {
-	public int codArticulos = 0;
+	public int codArticulo = 0;
 	public String nombre;
-	public int Unidad = 0;
-	public int prueba = 0;
-
+	public String descripcion;
+	public int unidades = 0;
+	public double precio = 0.0;
 	public Articulos() {
 
 	}
 
-	public Articulos(int codArticulos, String nombre, int unidad) {
-		this.codArticulos = codArticulos;
+	public Articulos(int codArticulo, String nombre, String descripcion, int unidades, double precio) {
+		this.codArticulo = codArticulo;
 		this.nombre = nombre;
-		Unidad = unidad;
+		this.descripcion = descripcion;
+		this.unidades = unidades;
+		this.precio = precio;
+	}
+	
+	public int getCodArticulo() {
+		return codArticulo;
 	}
 
-	public int getCodArticulos() {
-		return codArticulos;
+	public void setCodArticulo(int codArticulo) {
+		this.codArticulo = codArticulo;
 	}
-
-	public void setCodArticulos(int codArticulos) {
-		this.codArticulos = codArticulos;
-	}
-
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -32,17 +34,35 @@ public class Articulos {
 		this.nombre = nombre;
 	}
 
-	public int getUnidad() {
-		return Unidad;
+	public String getDescripcion() {
+		return descripcion;
 	}
 
-	public void setUnidad(int unidad) {
-		Unidad = unidad;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public int getUnidades() {
+		return unidades;
+	}
+
+	public void setUnidades(int unidades) {
+		this.unidades = unidades;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
 	}
 
 	@Override
 	public String toString() {
-		return "Articulos [codArticulos=" + codArticulos + ", nombre=" + nombre + ", Unidad=" + Unidad + "]";
+		return "Articulos [codArticulos=" + codArticulo + ", nombre=" + nombre + ", descripcion=" + descripcion
+				+ ", unidades=" + unidades + ", precio=" + precio + "]";
 	}
 
 }
+/**/
