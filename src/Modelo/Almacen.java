@@ -5,6 +5,7 @@ public class Almacen {
 	private String direccion;
 	private String telefono;
 	private int superficie = 0;
+	private int tamaño = 0;
 	private Articulos [] misArticulos;
 	private Almacen() {
 		
@@ -15,6 +16,7 @@ public class Almacen {
 		this.direccion = direccion;
 		this.telefono = telefono;
 		this.superficie = superficie;
+		this.tamaño = tamaño;
 		this.misArticulos = new Articulos[tamaño];
 	}
 
@@ -71,7 +73,7 @@ public class Almacen {
 	 * @return el tamaño del array
 	 */
 	public int tamañoArray() {
-		int tamaño=0;
+		//int tamaño=0;
 		for(int i = 0; i < misArticulos.length; i++) {
 			if(misArticulos[i]!=null) {
 				tamaño++;
@@ -87,7 +89,7 @@ public class Almacen {
 	 * @param a Artículo a introducir
 	 * @return Hace que interrumpa el for
 	 */
-	public boolean insertaArticulo(Articulos a, tamaño) {
+	public boolean insertaArticulo(Articulos a, int tamaño) {
 		boolean result = false;
 		if(a!=null && tamañoArray()<tamaño && muestraPorCodigo(a.getCodArticulo())==null) {
 			for(int i = 0; i < misArticulos.length && !result; i++) {
@@ -97,6 +99,7 @@ public class Almacen {
 				}
 			}
 		}
+		return result;
 	}
 	
 	public Articulos[] muestraTodos(){
@@ -112,7 +115,7 @@ public class Almacen {
 		Articulos a = null;
 		if(misArticulos!=null && tamañoArray() > 0) {
 			for(int i = 0; i < misArticulos.length && a == null; i++) {
-				if(misArticulos[i].getCodArticulo().equeals(codArticulo)) {
+				if(misArticulos[i].getCodArticulo() == codArticulo) {
 					a = misArticulos[i];
 				}
 			}

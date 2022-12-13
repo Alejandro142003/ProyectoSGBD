@@ -3,7 +3,7 @@ package Modelo;
 import java.util.Objects;
 
 public class Articulos {
-	private int codArticulo = 1;
+	private int codArticulo = 0;
 	
 	private String nombre;
 	private String descripcion;
@@ -22,7 +22,7 @@ public class Articulos {
 	}
 	
 	public int getCodArticulo() {
-		return codArticulo;
+		return this.codArticulo;
 	}
 
 	public void setCodArticulo(int codArticulo) {
