@@ -4,7 +4,7 @@ public class Menu{
 	/*
 	 *Esta función nos muestra el menu 
 	 */
-	 public static void muestraMenu() {
+	 public static void menuPrincipal() {
 		 System.out.println("");
 	        System.out.println("@---------------------------@");
 	        System.out.println("|            MENU            |");
@@ -36,19 +36,53 @@ public class Menu{
 	 }while(valido);
 	 return opcion;
  }
+ 
  /*
   * Funcion que nos muestra el menu
   */
- public static void modificar() {
+ public static void menuIntroducir() {
+	 System.out.println("");
+     System.out.println("@-----------------------------@");
+     System.out.println("|       MENU: INTRODUCIR      |");
+     System.out.println("|-----------------------------|");
+     System.out.println("|Elige una opcion:            |");
+     System.out.println("| 1.Introducir el nombre      |");
+     System.out.println("| 2.Introducir la cantidad    |");
+     System.out.println("| 3.Introducir el precio      |");
+     System.out.println("| 4.Introducir la descripcion |");
+     System.out.println("@-----------------------------@");
+     System.out.println("");
+ }
+ /**
+  * Función que pide un entero entre 1 y 4,validandolo
+  * @return opcion 
+  */
+ public static int introduceOp() {
+	 int opcion=-1;
+	 boolean valido=false;
+	 do {
+		 valido=false;
+		 opcion=Introducir.leeEntero("Elige una opcion");
+		 if((opcion<1)||(opcion>4)){
+			System.out.println("Debe de introducir un opción valida");
+			valido=true;
+		 }
+	 }while(valido);
+	 return opcion;
+ }
+ /*
+  * Funcion que nos muestra el menu
+  */
+ public static void menuModificar() {
 	 System.out.println("");
      System.out.println("@---------------------------@");
-     System.out.println("|       MENU MODIFICAR       |");
-     System.out.println("|----------------------------|");
-     System.out.println("|Elige una opcion:           |");
-     System.out.println("| 1.Modifica el nombre       |");
-     System.out.println("| 2.Modifica la cantidad     |");
-     System.out.println("| 3.Modifica el precio       |");
-     System.out.println("| 4.Modifica la descripcion  |");
+     System.out.println("|       MENU: MODIFICAR     |");
+     System.out.println("|---------------------------|");
+     System.out.println("|Elige una opcion:          |");
+     System.out.println("| 1.Modifica el nombre      |");
+     System.out.println("| 2.Modifica la cantidad    |");
+     System.out.println("| 3.Modifica el precio      |");
+     System.out.println("| 4.Modifica la descripcion |");
      System.out.println("@---------------------------@");
      System.out.println("");
  }
@@ -69,6 +103,7 @@ public class Menu{
 	 }while(valido);
 	 return opcion;
  }
+ 
  /*
   * Funcion que nos muestra el menu
   */
@@ -78,7 +113,7 @@ public class Menu{
 	 System.out.println("2.No");
  }
  /**
-  * Funciónque pide un entero (1 o 2),validandolo
+  * Función que pide un entero (1 o 2),validandolo
   * @return opcion 
   */
  public static int chooseOption() {
@@ -94,4 +129,13 @@ public class Menu{
 	 }while(valido);
 	 return opcion;
  }
+ 
+ /**
+  * Nos muestra  un texto de despedida
+  */
+ public static void textoFinal(){
+   
+     System.out.println("Gracias por usar nuestro programa");
+
+   }
  }
