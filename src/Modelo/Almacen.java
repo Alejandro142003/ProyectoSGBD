@@ -7,6 +7,7 @@ public class Almacen {
 	private int superficie = 0;
 	private int tamaño = 0;
 	private Articulos [] misArticulos;
+	@SuppressWarnings("unused")
 	private Almacen() {
 		
 	}
@@ -103,7 +104,7 @@ public class Almacen {
 	}
 	
 	public Articulos[] muestraTodos(){
-		getMisArticulos();
+		return getMisArticulos();
 	}
 	
 	/**

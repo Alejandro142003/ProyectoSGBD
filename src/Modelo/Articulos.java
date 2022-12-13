@@ -9,6 +9,7 @@ public class Articulos {
 	private String descripcion;
 	private int unidades = 0;
 	private double precio = 0.0;
+	@SuppressWarnings("unused")
 	private Articulos() {
 
 	}
