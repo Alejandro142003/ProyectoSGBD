@@ -1,6 +1,7 @@
 package Modelo;
 
 public class Articulos {
+	public int codArticulo = 1;
 	public int codArticulos = 0;
 	public String nombre;
 	public int Unidad = 0;
@@ -46,3 +47,4 @@ public class Articulos {
 	}
 
 }
+
