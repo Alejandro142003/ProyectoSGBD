@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package Modelo;
 
 public class Almacen {
@@ -117,6 +116,11 @@ public class Almacen {
 		return a;
 	}
 	
+	/**
+	 * Actualizamos un articulo
+	 * @param a: Articulo a actualizar
+	 * @return: Hace que interrumpa el for
+	 */
 	public boolean actualizaArticulo(Articulo a) {
 		boolean result = false;
 		if(a!=null && muestraPorCodigo(a.getCodArticulo())!=null) {
@@ -130,10 +134,25 @@ public class Almacen {
 		return result;
 	}
 	
-	
+	/**
+	 * Elimina un artículo
+	 * @param a: Articulo a borrar
+	 * @return: Hace que se interrumpa el for
+	 */
+	public boolean eliminaArticulo(Articulo a) {
+		boolean result = false;
+		if(a!=null && muestraPorCodigo(a.getCodArticulo())!=null) {
+			for (int i=0; i<misArticulos.lenght && !result; i++) {
+				if(misArticulos[i].equals(a)) {
+					misArticulos[i]=null;
+					result = true;
+				}
+			}
+		}
+		return result;
+	}
 	
 	
 	
 }
-=======
->>>>>>> cc3ee70a63b774bcc4516433b1483fa1e17fa33a
+
