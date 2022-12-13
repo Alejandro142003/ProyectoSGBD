@@ -3,12 +3,13 @@ package Modelo;
 import java.util.Objects;
 
 public class Articulos {
-	private int codArticulo = 1;
+	private int codArticulo = 0;
 	
 	private String nombre;
 	private String descripcion;
 	private int unidades = 0;
 	private double precio = 0.0;
+	@SuppressWarnings("unused")
 	private Articulos() {
 
 	}
@@ -22,7 +23,7 @@ public class Articulos {
 	}
 	
 	public int getCodArticulo() {
-		return codArticulo;
+		return this.codArticulo;
 	}
 
 	public void setCodArticulo(int codArticulo) {
