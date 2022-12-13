@@ -3,6 +3,13 @@ package Utilidades;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Para recoger un float por teclado.
+ * 
+ * @param text
+ * @param Float
+ */
+
 public static float leeFloat (String text) {
 	boolean numeroCorrecto = false;
 	Scanner teclado = new Scanner(System.in);
@@ -32,7 +39,10 @@ public static float leeFloat (String text) {
 }
 
 /**
- * Para devolver un int 
+ * Para devolver un int.
+ * 
+ * @param text
+ * @return Int
  */
 
 public static int leeEntero(String text) {
@@ -64,8 +74,7 @@ public static int leeEntero(String text) {
 }
 
 /**
- * Para devolver un String, el texto que recibe por teclado se imprime 
- * por pantalla.
+ * Para devolver un String escrito por teclado.
  * 
  * @param text
  * @return String
@@ -80,3 +89,29 @@ public static String leeString (String text){
 
     return texto;
   }
+
+/**
+ * Método para rellenar un array con valores enteros.
+ * 
+ * @param myArray
+ * @return Int[] myArray
+ */
+
+public static int[] rellenaArray(int[] miArray){
+    for (int i = 0; i < miArray.length; i++);
+    miArray[i] = leeEntero("Introduce número para la posición " + i + " :");
+    return myArray;
+}
+
+/**
+ * Método para rellenar un array con valores decimales (menores)
+ * 
+ * @param miArray
+ * @return Float[] myArray
+ */
+
+public static float[] rellenaArray(float[] miArray){
+    for (int i = 0; i < miArray.length; i++);
+    miArray[i] = leeFloat("introduce número para la posición " + i + " :");
+    return myArray;
+}
