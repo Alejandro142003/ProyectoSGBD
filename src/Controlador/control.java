@@ -1,7 +1,9 @@
 package Controlador;
 
 import Modelo.Articulos;
+
 import Utilidades.Introducir;
+
 import Vista.Menu;
 
 public class control {
@@ -60,6 +62,29 @@ public class control {
 					System.out.println("Introduce una opción valida");
 				break;
 			}
+		}
+		Menu.opcionSiNo("¿Quieres introducir nuevos articulos?");
+		
+		switch(op) {
+		case 1:
+			
+		break;
+		
+		case 2:
+			
+			
+			break;
+		case 3:
+			
+			break;
+		case 4:
+			
+	        break;
+	        
+	    default:
+	    	
+	    	break;
+
 		}
 	}
 }

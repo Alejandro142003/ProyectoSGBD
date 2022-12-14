@@ -112,6 +112,7 @@ public class Menu{
 	 System.out.println(texto);
 	 System.out.println("1.Si");
 	 System.out.println("2.No");
+
 	 chooseOption();
  }
  /**
