@@ -4,10 +4,6 @@ import Modelo.Articulos;
 
 import Utilidades.Introducir;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2d16974438654ffead9ad9bd672c9a6f3ada88aa
 import Vista.Menu;
 
 public class control {
@@ -51,7 +47,6 @@ public class control {
 		    	break;
 		}
 	}
-<<<<<<< HEAD
 	public static void modificarArticulos(Articulos A){
 		
 		boolean salir = false;
@@ -100,55 +95,6 @@ public class control {
 		
 		if(Menu.chooseSiNo()==1) {
 			
-=======
-	public static void IntroducirArticulos(int op){
-
-		boolean salir = false;
-		Menu.opcionSiNo("¿Quieres introducir nuevos articulos?");
-		Introducir.leeEntero("");
-		while(!salir) {
-			switch(op) { 
-				case 1:
-					
-				break;	
-				case 2:
-					
-				break;
-				case 3:
-					
-				break;
-				case 4:
-					
-				break;
-				default:
-					System.out.println("Introduce una opción valida");
-				break;
-			}
-
-		
-		Menu.opcionSiNo("¿Quieres introducir nuevos articulos?");
-		
-		switch(op) {
-		case 1:
-			
-		break;
-		
-		case 2:
-			
-			
-			break;
-		case 3:
-			
-			break;
-		case 4:
-			
-	        break;
-	        
-	    default:
-	    	
-	    	break;
-
->>>>>>> 2d16974438654ffead9ad9bd672c9a6f3ada88aa
 		}
 	}
 }
