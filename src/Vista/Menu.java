@@ -1,5 +1,5 @@
 package Vista;
-import Utilidades.*;
+import Utilidades.Introducir;
 public class Menu{  
 	/*
 	 *Esta función nos muestra el menu 
