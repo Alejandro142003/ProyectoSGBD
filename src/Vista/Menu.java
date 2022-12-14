@@ -91,6 +91,7 @@ public class Menu{
   * @return opcion 
   */
  public static int chooseOpcion() {
+	 System.out.println();
 	 int opcion=-1;
 	 boolean valido=false;
 	 do {
@@ -108,18 +109,16 @@ public class Menu{
  * Funcion para preguntar al usuario si quiere hacer algo.
  * @param texto Texto que se va a mostrar por pantalla.
  */
- public static void opcionSiNo(String texto) {
+ public static void menuSiNo(String texto) {
 	 System.out.println(texto);
 	 System.out.println("1.Si");
 	 System.out.println("2.No");
-
-	 chooseOption();
  }
  /**
   * Función que pide un entero (1 o 2),validandolo
   * @return opcion 
   */
- public static int chooseOption() {
+ public static int chooseSiNo() {
 	 int opcion=-1;
 	 boolean valido=false;
 	 do {

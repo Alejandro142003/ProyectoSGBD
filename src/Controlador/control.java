@@ -13,26 +13,33 @@ public class control {
 	   * @param E1 Objeto de la Clase Empleado para modificar sus par�metros
 	   * @param op La opcion del men� elegida
 	   */
-	public static void MenuPrincipal(Articulos A1,int op) {
+	public static void menuPrincipal(Articulos A1,int op) {
 		switch(op) {
 			case 1:
 				
 				System.out.println("");
 				System.out.println("");
-				Menu.menuIntroducir();
 				
-				
-			break;
+				break;
 			
 			case 2:
 				
-				
+				System.out.println("");
+				System.out.println("");
+				Menu.menuIntroducir();
+				modificarArticulos(A1);
 				break;
+				
 			case 3:
 				
+				System.out.println("");
+				System.out.println("");
 				break;
+				
 			case 4:
 				
+				System.out.println("");
+				System.out.println("");
 		        break;
 		        
 		    default:
@@ -40,51 +47,54 @@ public class control {
 		    	break;
 		}
 	}
-	public static void IntroducirArticulos(int op){
+	public static void modificarArticulos(Articulos A){
+		
 		boolean salir = false;
-		Menu.opcionSiNo("¿Quieres introducir nuevos articulos?");
-		Introducir.leeEntero("");
+		Menu.menuSiNo("¿Quieres modificar articulos?");
+		
 		while(!salir) {
-			switch(op) { 
-				case 1:
-					
-				break;	
-				case 2:
-					
-				break;
-				case 3:
-					
-				break;
-				case 4:
-					
-				break;
-				default:
-					System.out.println("Introduce una opción valida");
-				break;
+			if(Menu.chooseSiNo()==1) {
+				switch(Menu.chooseOpcion()) {
+					case 1:
+						
+						A.setNombre(Introducir.leeString("Introduce el nombre del artículo: "));
+						System.out.println(A);
+						break;
+						
+					case 2:
+
+						A.setUnidades(Introducir.leeEntero("Introducela cantidad de artículos: "));
+						System.out.println(A);
+						break;
+						
+					case 3:
+						
+						A.setPrecio(Introducir.leeFloat("Introduce el precio del artículo: "));
+						System.out.println(A);
+						break;
+						
+					case 4:
+
+						A.setNombre(Introducir.leeString("Introduce el nombre del artículo: "));
+						System.out.println(A);
+						break;
+						
+					default:
+						
+						System.out.println("Introduce una opción valida");
+						break;
+				}
+			}else {
+				salir=true;
 			}
 		}
-		Menu.opcionSiNo("¿Quieres introducir nuevos articulos?");
+	}
+	public static void crearArticulos() {
 		
-		switch(op) {
-		case 1:
-			
-		break;
+		Menu.menuOption("¿Quieres crear un nuevo articulo?");
 		
-		case 2:
+		if(Menu.chooseOption()==1) {
 			
-			
-			break;
-		case 3:
-			
-			break;
-		case 4:
-			
-	        break;
-	        
-	    default:
-	    	
-	    	break;
-
 		}
 	}
 }
