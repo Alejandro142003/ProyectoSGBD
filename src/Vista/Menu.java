@@ -112,7 +112,9 @@ public class Menu{
 	 System.out.println(texto);
 	 System.out.println("1.Si");
 	 System.out.println("2.No");
+
 	 chooseOption();
+
  }
  /**
   * Función que pide un entero (1 o 2),validandolo
