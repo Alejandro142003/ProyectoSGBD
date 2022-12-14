@@ -113,6 +113,12 @@ public class Menu{
 	 System.out.println(texto);
 	 System.out.println("1.Si");
 	 System.out.println("2.No");
+<<<<<<< HEAD
+=======
+
+	 chooseOption();
+
+>>>>>>> 2d16974438654ffead9ad9bd672c9a6f3ada88aa
  }
  /**
   * Función que pide un entero (1 o 2),validandolo
