@@ -104,11 +104,12 @@ public class Menu{
 	 return opcion;
  }
  
- /*
-  * Funcion que nos muestra el menu
-  */
- public static void valModificar() {
-	 System.out.println("¿Está seguro de que quiere realizar los cambios efectuadoss?");
+/**
+ * Funcion para preguntar al usuario si quiere hacer algo.
+ * @param texto Texto que se va a mostrar por pantalla.
+ */
+ public static void opcionSiNo(String texto) {
+	 System.out.println(texto);
 	 System.out.println("1.Si");
 	 System.out.println("2.No");
  }
