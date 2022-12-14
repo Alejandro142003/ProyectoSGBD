@@ -19,7 +19,10 @@ public class control {
 				
 				System.out.println("");
 				System.out.println("");
-				
+				Menu.menuSiNo("¿Quieres crear un nuevo articulo?");
+				if(Menu.chooseSiNo()==1) {
+					crearArticulos();
+				}else
 				break;
 			
 			case 2:
@@ -89,12 +92,9 @@ public class control {
 			}
 		}
 	}
+	
 	public static void crearArticulos() {
 		
-		Menu.menuSiNo("¿Quieres crear un nuevo articulo?");
-		
-		if(Menu.chooseSiNo()==1) {
-			
-		}
+
 	}
 }
