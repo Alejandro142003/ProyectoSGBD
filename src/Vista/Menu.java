@@ -6,7 +6,7 @@ public class Menu{
 	 */
 	 public static void menuPrincipal() {
 		 System.out.println("");
-	        System.out.println("@---------------------------@");
+	        System.out.println("@----------------------------@");
 	        System.out.println("|            MENU            |");
 	        System.out.println("|----------------------------|");
 	        System.out.println("|Elige una opcion:           |");
@@ -14,7 +14,7 @@ public class Menu{
 	        System.out.println("| 2.Modificar articulo       |");
 	        System.out.println("| 3.Borrar articulo          |");
 	        System.out.println("| 4.Salir                    |");
-	        System.out.println("@---------------------------@");
+	        System.out.println("@----------------------------@");
 	        System.out.println("");
 	 }
 	 /**

@@ -91,9 +91,9 @@ public class control {
 	}
 	public static void crearArticulos() {
 		
-		Menu.menuOption("¿Quieres crear un nuevo articulo?");
+		Menu.menuSiNo("¿Quieres crear un nuevo articulo?");
 		
-		if(Menu.chooseOption()==1) {
+		if(Menu.chooseSiNo()==1) {
 			
 		}
 	}
